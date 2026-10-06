@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Pizza Spot</title>
+    </head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #222;
+    line-height: 1.6;
+}
+         .boxes{
+    background-color:whitesmoke;
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: minmax(200px ,auto);
+    border-radius: 40px;
+    grid-template-columns: repeat(11, 1fr);
+
+}
+
+.boxes img {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  background-color: beige;
+  border-radius: 50px;
+}
+.box1{
+    grid-column: 1/4;
+    border: 2px solid black;
+    grid-row: 1/4;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 40px;
+    padding-bottom: 15px;
+    padding: 0px 0px 20px;
+    text-align: center;
+    
+}
+.box2{
+    grid-column: 4/8;
+    border: 2px solid black;
+    grid-row: 1/4;
+   overflow: hidden;
+     width: 100%;
+     border-radius: 40px;
+      padding-bottom: 15px;
+      text-align: center;
+
+}
+.box3{
+    grid-column: 8/12;
+    border: 2px solid black;
+    grid-row: 1/4;
+    overflow: hidden;
+     width: 100%;
+     border-radius: 40px;
+     text-align: center;
+}
+.main-btn{
+    display: inline-flex;
+    align-items: center;
+}
+.hero-image{
+    display: inline-flex;
+    justify-content: right;
+    display: grid;
+    height: 20%;
+     grid-template-columns:1fr;
+     padding-bottom: auto;
+     height: auto;
+}
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+
+    padding: 70px 7%;
+    background: #fff0e5;
+    gap: 50px;
+    align-items: center;
+
+    padding: 70px 7%;
+    background: #fff0e5;
+
+}
+.offer-sec{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    gap: 40px;
+    align-items: center;
+    background-color: #e63946;
+    color: white;
+    margin: 70px 7%;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: left;                
+}
+
+.offer-sec .small-title{
+    color: white;
+    font-weight: bold;
+}
+
+.offer-text h2{
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.offer-text h3{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.offer-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.offer-sec button{
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: auto;
+    margin: 0;
+}
+
+
+
+
+
+.popular{
+    border-radius: 30px;
+    padding: 40px 60px 60px;
+    text-align: center;
+}
+    .popular h2{
+    font-size: 40px;
+    margin: 0;}
+   
+   .subtitle{
+    color: #777;
+    font-size: 18px;
+    margin: 15px 0 40px;}
+
+
+.pizza-grid {
+    display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));   
+    gap: 30px;                                          
+    background-color: transparent !important;
+    background-color: rgb(225, 242, 200);
+    border-radius: 30px;
+    
+}
+
+.pizza-card1,.pizza-card2,.pizza-card3 {
+    width: 100%;
+    overflow: hidden;
+    
+    
+    border-radius: 30px;                 
+    background-color: white;             
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+    
+    
+}
+
+
+.pizza-card img {
+    width: 100% !important;
+    height: 250px !important;
+    display: block;
+    object-fit: cover !important;
+    border-radius: 30px 30px 30px 30px;
+}
+
+
+
+
+
+ #header{
+                width: 100%;
+                height: 100%;
+                display: inline-flex;
+                padding: 10px 20px 0px;
+                border-width: 0px 0px 2px 0px;
+                border-style: solid;
+                background-color: rgb(120, 53, 53);
+                align-items: center;
+               border-bottom: 10px;
+               border-color: white;
+               border-radius: 0px;
+               justify-content: space-between;
+             }
+             .logo{
+                width: auto;
+                height: 40%;
+                margin-right: auto;
+                
+             }
+             .menu{
+                width: 40%;
+            
+                
+             }
+             .btn{
+                width: 30%;
+                height: 40%;
+                
+                
+                
+            
+            }
+              ul{
+                display: inline-flex;
+                list-style-type: none;
+             }
+            
+             li,button{
+                font-size: 15px;
+                padding: 20px;
+                margin: 0px 10px;
+                border-radius: 20px;
+                background-color: lightgoldenrodyellow;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 800;
+                height: 15px;
+                text-align: center;
+                color: black;
+            justify-content: center;
+        }
+                
+
+             a{
+                text-decoration: none;
+                color: black;
+             }
+             .header-btn{
+                margin-left: 280px;
+                margin-top: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 30px;
+                width: auto;
+             }
+             
+            
+            
+            .price {
+    display: block;
+    color: #D62828;
+    font-size: 20px;
+    font-weight: bold;}
+    .About-us{
+    background-color: beige;
+    padding: 60px;
+    border-radius: 20px;
+    margin: 70px 7%;
+    text-align: left;
+}
+
+.About-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.About-img img{
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.About-h2{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    font-size: 30px;
+    color: black;
+    margin: 0 0 20px;
+}
+
+.about-me{
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    padding: 25px;
+    background-color: beige;
+    border-radius: 20px;
+}
+
+.about-para p{
+    font-size: 18px;
+    color: black;
+    margin: 0 0 15px;
+}
+
+.about-para p:last-child{
+    margin-bottom: 0;
+}
+    
+    
+    
+
+            
+            #Contact{
+    width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: aliceblue;
+    border-radius: 20px;}
+    
+    
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px ;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+    
+}
+
+.footer-links a {
+    color: white;
+}
+footer p{
+    color: white; 
+}
+.card-body{
+    padding: 25px 20px 30px;
+}
+
+.card-body button{
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.pizza-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.pizza-card:hover img{
+    transform: scale(1.08);
+}
+
+.card-body button:hover{
+    background-color: #D62828;
+}
+
+@media (max-width: 786px){
+
+    
+    #header{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .logo{
+        margin: 0 auto;
+    }
+    .logo img{
+        height: 70px;
+    }
+    .menu{
+        width: 100%;
+    }
+    ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 10px 0;
+    }
+    li{
+        font-size: 13px;
+        padding: 10px 12px;
+        margin: 4px;
+        height: auto;
+    }
+
+    
+    .hero{
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    .hero h1{
+        font-size: 26px;
+    }
+
+    
+    .popular{
+        padding: 25px 10px 30px;
+    }
+    .popular h2{
+        font-size: 30px;
+    }
+    .pizza-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .pizza-card img{
+        height: 130px !important;
+    }
+    .card-body{
+        padding: 12px 10px 15px;
+    }
+    .card-body h3{
+        font-size: 15px;
+    }
+    .card-body p{
+        font-size: 12px;
+    }
+    .price{
+        font-size: 15px;
+    }
+    .card-body button{
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    
+    .offer-sec{
+        grid-template-columns: 1fr;
+        margin: 40px 4%;
+        padding: 25px 20px;
+        text-align: center;
+    }
+    .offer-text h2{
+        font-size: 28px;
+    }
+    .offer-text h3{
+        font-size: 22px;
+    }
+
+    
+    .About-us{
+        margin: 40px 4%;
+        padding: 20px;
+    }
+    .About-img{
+        grid-template-columns: 1fr;
+    }
+    .About-img img{
+        grid-column: 1;
+        grid-row: auto;
+        height: 250px;
+    }
+    .About-h2{
+        grid-column: 1;
+        grid-row: auto;
+        margin: 15px 0;
+    }
+    .about-me{
+        grid-column: 1;
+        grid-row: auto;
+        padding: 15px;
+    }
+
+    
+    #Contact{
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    
+    .footer-links{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+
+    </style>
+    <body>
+        <div id="header">
+            <div class="logo">
+
+            <img src="https://i.ibb.co/4nXdDyhv/a1c404bea49c0143058bc4dd9da79d33-removebg-preview.png" height="100px">
+                
+            </div>
+            
+            <div class="menu">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#Offer">Offer</a></li>
+                    <li><a href="#About">About us</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="hero" id="Home">
+        <div class="hero-text">
+            <p class="small-title">WELCOME TO PIZZA HOUSE</p>
+
+            <h1>Fresh, Hot & Delicious Pizza </h1>
+
+            <p>
+                Enjoy freshly baked pizzas made with delicious toppings
+                and the finest ingredients.
+            </p>
+            
+
+            <a href="#Menu"><button class="main-btn"> Our Menu</button></a>
+        </div>
+        
+
+        <div class="hero-image">
+            <img src="https://i.pinimg.com/736x/f3/a9/05/f3a9057afc2b6891efc9631574f186c1.jpg"
+                 alt="Delicious Pizza">
+        </div>
+    </div>
+        
+        <section class="popular" id="Menu">
+    <h2>Our Popular Pizzas</h2>
+    <p class="subtitle">Try our customer's favorite pizzas.</p>
+
+    <div class="pizza-grid">
+
+        <div class="pizza-card">
+            <a href="pepperonipizza.html" target="_self">
+            <img src="https://i.pinimg.com/736x/a0/78/7a/a0787a7d2d4bf7f5469916aaf9c31ed0.jpg" alt="Pepperoni Pizza"></a>
+            <div class="card-body">
+                
+                <h3>Pepperoni Pizza</h3>
+                <p>Cheese, pepperoni and fresh tomato sauce.</p>
+                <span class="price">Rs. 999</span>
+                
+                <a href="#Contact"><button>Order Now</button></a>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="pizza-card">
+            <a href="ChickenFjita.html" target="_self">
+            <img src="https://i.pinimg.com/736x/7c/7c/3b/7c7c3b479de337b85eed0ed1f408bd0d.jpg" alt="Chicken Fajita Pizza"></a>
+            <div class="card-body">
+                <h3>Chicken Fajita</h3>
+                <p>Chicken, capsicum, onions and special sauce.</p>
+                <span class="price">Rs. 1,099</span>
+                
+                <a href="#Contact"><button >Order Now</button></a>
+                        <br><br>
+            </div>
+        </div>
+
+
+        <div class="pizza-card">
+            <a href="cheesepizza.html" target="_self">
+            <img src="https://i.pinimg.com/736x/c8/01/b9/c801b92c152642c37f24d574547557ea.jpg" alt="Cheese Lover Pizza"></a>
+            <div class="card-body">
+                <h3>Cheese Lover</h3>
+                <p>Extra cheese with our delicious special sauce.</p>
+                <span class="price">Rs. 899</span>
+                
+               <a href="#Contact"><button >Order Now</button>
+                        <br><br>
+            </div>
+        </div>
+
+    </div>
+    <div class="offer-sec" id="Offer">
+        <div class="offer-text">
+        <p class="small-title">SPECIAL OFFER</p>
+
+            <h2>2 Large Pizzas + 1 Drink</h2>
+
+            <p>
+                Enjoy our special family deal at an amazing price.
+            </p>
+
+            <h3>Only Rs. 2,499</h3>
+
+            <button class="main-btn">Grab The Deal</button>
+            </div>
+        
+        <div class="offer-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7GqQ7grr1yaHQG-Bl4DByWmasGIdAuEEDRrz1xr-2kA&s=10">
+        </div>
+        </div>
+    </div>
+    <div class="About-us" id="#About">
+        <div class="About-img">
+            <img src="https://i.pinimg.com/736x/50/66/20/5066200a935add22fd08055ed496cc13.jpg">
+            <h2 class="About-h2">About us</h2>
+            <div class="about-me">
+            <div class="about-para">
+                <p>At The Pizza Spot, we make pizza with love. Every pizza starts with fresh dough, rolled by hand and topped with care, because we believe great food begins with passion.</p>
+            <p>We use only the finest ingredients: real mozzarella, ripe tomatoes and fresh vegetables. Our sauce is made in-house, and every pizza is baked hot and fresh, just for you.</p>
+            <p>Whether you are sharing with family, celebrating with friends, or treating yourself, we promise a slice that feels like home. Come hungry, leave happy.</p>
+            </div>
+            
+        </div>
+</div>
+    </div>
+   
+        <div id="Contact">
+    
+    <h2>Contact Us</h2>
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter Your Name" name="full-name">
+        <br><br>
+        <label>Email</label>
+        <input type="email" placeholder="Enter Your Email" name="email">
+        <br><br>
+        <label>Phone</label>
+        <input type="tel" placeholder="Enter Your Phone" name="phone-number">
+        <br><br>
+        <label>Address</label>
+        <input type="text" placeholder="Home Address" name="home-address">
+        <br><br>
+        <button class="contact-btn">Submit</button>
+    </form>
+</div>
+</section>
+
+            
+       
+
+    <footer>
+
+        <h2>The Pizza Spot</h2>
+
+        <p>Fresh pizza. Great taste. Happy customers.</p>
+
+        <div class="footer-links">
+            <a href="#Home">Home</a>
+            <a href="#Menu">Menu</a>
+            <a href="#Offer">Offers</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <p class="copyright">
+            
+        </p>
+
+    
+
+</footer>
+    </body>
+</html>

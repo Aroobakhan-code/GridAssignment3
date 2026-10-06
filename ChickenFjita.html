@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pepperoni Pizza</title>
+
+    </head>
+    <style>
+        #header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgb(120, 53, 53);
+}
+
+.logo img{
+    height: 80px;
+    display: block;
+}
+
+#header ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+#header li{
+    background-color: lightgoldenrodyellow;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#header li a{
+    display: block;
+    padding: 12px 22px;
+    color: black;
+    text-decoration: none;
+}
+        body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.fajita-text{
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    gap: 40px;
+    align-items: center;
+    padding: 60px 7%;
+}
+
+.fajita-info h2{
+    font-size: 40px;
+    margin: 0 0 15px;
+}
+
+.fajita-info p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.fajita-img img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+}
+.fajita-info button{
+    margin-top: 25px;
+    background-color: #D62828;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 34px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.35);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fajita-info button:hover{
+    background-color: #222;
+    transform: translateY(-3px);
+}
+@media (max-width: 786px){
+
+  
+    #header{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .logo img{
+        height: 70px;
+    }
+    .menu{
+        width: 100%;
+    }
+    #header ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 10px 0;
+    }
+    #header li{
+        font-size: 13px;
+    }
+    #header li a{
+        padding: 10px 14px;
+    }
+
+    
+    .fajita-text{
+        grid-template-columns: 1fr;
+        padding: 30px 5%;
+        gap: 25px;
+        text-align: center;
+    }
+    .fajita-info h2{
+        font-size: 30px;
+    }
+    .fajita-info p{
+        font-size: 16px;
+    }
+    .fajita-img img{
+        height: 250px;
+    }
+}
+
+    </style>
+    <body>
+        <div id="header">
+    <div class="logo">
+        <img src="https://i.ibb.co/4nXdDyhv/a1c404bea49c0143058bc4dd9da79d33-removebg-preview.png" alt="Pizza Logo">
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="pizzagrid.html#Home">Home</a></li>
+            <li><a href="pizzagrid.html#Menu">Menu</a></li>
+            <li><a href="pizzagrid.html#Contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+        <div class="fajita-text">
+            <div class="fajita-info">
+            
+        <h2>Fajita Pizza</h2>
+        <p>
+            Our Chicken Fajita Pizza brings bold flavor to every slice. Hand-rolled dough is baked golden and loaded with tender, spicy marinated chicken, juicy onions, crisp green peppers and stretchy mozzarella cheese. A drizzle of our special creamy sauce ties it all together. Smoky, zesty and full of flavor, it is perfect for anyone who loves a little spice.
+        <br><br>
+        <a href="pizzagrid.html#Contact"><button>Order now</button></a>
+        </div>
+        <div class="fajita-img">
+        <img src="https://i.pinimg.com/736x/7c/7c/3b/7c7c3b479de337b85eed0ed1f408bd0d.jpg">
+        </div>
+        
+        </div>
+    </body>
+</html>
